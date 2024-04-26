@@ -3,10 +3,10 @@
   config, 
   ... 
 }: {
+  home.file.".config/hypr/hyprland.config".source = ./hyprland; 
+
   wayland.windowManager.hyprland = {
     enable = true;
-
-    extraConfig = import ./hyprland.conf;
 
     # settings = {
     #   "$mod" = "SUPER";
