@@ -11,35 +11,15 @@
     p7zip
 
     # utils
-    ripgrep
-    yq-go # https://github.com/mikefarah/yq
     htop
 
     # misc
-    libnotify
-    wineWowPackages.wayland
     xdg-utils
     graphviz
 
-    # productivity
-    obsidian
-
     # IDE
     insomnia
-
-    # cloud native
-    docker-compose
-    kubectl
-
-    nodejs
-    nodePackages.npm
-    nodePackages.pnpm
-    yarn
-
-    # db related
-    dbeaver
-    mycli
-    pgcli
+    vscodium
   ];
 
   programs = {

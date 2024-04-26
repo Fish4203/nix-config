@@ -32,7 +32,7 @@
     ...
   }: {
     nixosConfigurations = {
-      metabox = nixpkgs.lib.nixosSystem {
+      fish4203 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
@@ -44,7 +44,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs;
-            home-manager.users.fish4203 = import ./home;
+            home-manager.users.fish4203 = import ./home ;
           }
         ];
       };
