@@ -67,14 +67,18 @@ in {
     packages = with pkgs; [
       # icon fonts
       material-design-icons
+      weather-icons
 
       # normal fonts
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
 
+      fira-code
+      fira-code-symbols
+
       # nerdfonts
-      (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
+      (nerdfonts.override {fonts = ["FiraCode" "FiraMono"];})
     ];
 
     # use fonts specified by user rather than default ones
@@ -86,7 +90,7 @@ in {
     fontconfig.defaultFonts = {
       serif = ["Noto Serif" "Noto Color Emoji"];
       sansSerif = ["Noto Sans" "Noto Color Emoji"];
-      monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
+      monospace = ["FiraCode Nerd Font" "Noto Color Emoji"];
       emoji = ["Noto Color Emoji"];
     };
   };
@@ -123,6 +127,7 @@ in {
     scrot
     neofetch
     xfce.thunar # xfce4's file manager
+    pass
   ];
 
   # Enable sound with pipewire.
