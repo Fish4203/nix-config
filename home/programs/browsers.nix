@@ -14,7 +14,6 @@
 
     firefox = {
       enable = true;
-      profiles.fish4203 = {};
     };
   };
 }

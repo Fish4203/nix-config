@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  catppuccin-bat,
   ...
 }: {
   home.packages = with pkgs; [
@@ -10,9 +9,6 @@
     unzip
     p7zip
 
-    # utils
-    htop
-
     # misc
     xdg-utils
     graphviz
@@ -20,36 +16,20 @@
     # IDE
     insomnia
     vscodium
+
+    # security 
+    bitwarden
   ];
 
   programs = {
-    tmux = {
+    btop = {
       enable = true;
-      clock24 = true;
-      keyMode = "vi";
-      extraConfig = "mouse on";
-    };
-
-    bat = {
-      enable = true;
-      config = {
-        pager = "less -FR";
-        theme = "catppuccin-mocha";
+      settings = {
+        color_theme = "onedark";
       };
-      themes = {
-        # https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme
-        catppuccin-mocha = {
-          src = catppuccin-bat;
-          file = "Catppuccin-mocha.tmTheme";
-        };
-      };
-    };
-
-    btop.enable = true; # replacement of htop/nmon
-    eza.enable = true; # A modern replacement for ‘ls’
+    }; # replacement of htop/nmon
     jq.enable = true; # A lightweight and flexible command-line JSON processor
     ssh.enable = true;
-    aria2.enable = true;
 
     skim = {
       enable = true;
@@ -63,7 +43,7 @@
   };
 
   services = {
-    syncthing.enable = true;
+    # syncthing.enable = true;
 
     # auto mount usb drives
     udiskie.enable = true;

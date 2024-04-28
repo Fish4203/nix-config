@@ -21,10 +21,10 @@
     "video/*" = ["mpv.dekstop"];
     "image/*" = ["imv.desktop"];
     "application/json" = browser;
-    "application/pdf" = ["org.pwmt.zathura.desktop.desktop"];
-    "x-scheme-handler/discord" = ["discordcanary.desktop"];
-    "x-scheme-handler/spotify" = ["spotify.desktop"];
-    "x-scheme-handler/tg" = ["telegramdesktop.desktop"];
+    # "application/pdf" = [];
+    # "x-scheme-handler/discord" = [];
+    # "x-scheme-handler/spotify" = [];
+    # "x-scheme-handler/tg" = [];
   };
 in {
   xdg = {

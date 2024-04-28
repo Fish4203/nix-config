@@ -33,11 +33,6 @@
       url = "github:Duckonaut/split-monitor-workspaces?ref=9981a3a66ad8df721fe46617233c58edac368f11";
       inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
-
-    catppuccin-bat = {
-      url = "github:catppuccin/bat";
-      flake = false;
-    };
   };
 
   outputs = inputs @ {
