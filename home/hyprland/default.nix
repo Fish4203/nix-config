@@ -23,7 +23,6 @@
 
     extraConfig =  ''
       plugin {
-        
         split-monitor-workspaces {
             count = 10
         }

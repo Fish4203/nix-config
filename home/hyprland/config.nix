@@ -15,7 +15,7 @@
   # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
   # Execute your favorite apps at launch
-  # exec-once = "waybar & hyprpaper"; #& nm-applet 
+  exec-once = "hyprpaper"; #& nm-applet 
   # exec-once gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   # exec-once gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
 
