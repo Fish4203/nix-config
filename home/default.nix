@@ -5,6 +5,7 @@
   imports = [
     # ./fcitx5
     ./hyprland
+    ./waybar
     ./programs
     ./rofi
 #    ./shell
