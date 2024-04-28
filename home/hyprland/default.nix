@@ -35,7 +35,7 @@
     '';
 
     plugins = [
-      hyprland-plugins.packages.${pkgs.system}.hyprexpo
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
       split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     ];
   };
