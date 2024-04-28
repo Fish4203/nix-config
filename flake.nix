@@ -13,8 +13,8 @@
     # substituers will be appended to the default substituters when fetching packages
     # nix com    extra-substituters = [munity's cache server
 
-    extra-substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="  "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
+    # extra-substituters = ["https://hyprland.cachix.org"];
+    # trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="  "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
   };
 
   inputs = {
@@ -22,9 +22,11 @@
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprland.url = "github:hyprwm/Hyprland?ref=v0.38.1";
+    hyprland = {
+      url = "github:hyprwm/Hyprland?ref=v0.39.1";
+    };
     hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins?ref=00519a43c11f3343a63a6fc15deb7f7bc5624324";
+      url = "github:hyprwm/hyprland-plugins?ref=00d147d7f6ad2ecfbf75efe4a8402723c72edd98";
       inputs.hyprland.follows = "hyprland";
     };
     split-monitor-workspaces = {
