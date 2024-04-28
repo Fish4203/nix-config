@@ -3,14 +3,10 @@
   pkgs, 
   config, 
   split-monitor-workspaces,
-  hyprland-plugins,1
+  hyprland-plugins,
   ... 
 }: {
-  # home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf; 
   home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf; 
-  home.file.".config/hypr/hyprland_cleanup_after_startup.sh".source = ./hyprland_cleanup_after_startup.sh; 
-  home.file.".config/hypr/hyprland_handle_monitor_connect.sh".source = ./hyprland_handle_monitor_connect.sh; 
-  home.file.".config/hypr/hyprland_setup_dual_monitors.sh".source = ./hyprland_setup_dual_monitors.sh; 
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -29,7 +25,7 @@
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
       # Execute your favorite apps at launch
-      exec-once = waybar & hyprpaper #& nm-applet 
+      # exec-once = waybar & hyprpaper #& nm-applet 
       # exec-once gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
       # exec-once gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
 
@@ -177,16 +173,16 @@
       bind = $mainMod, 0, split-workspace, 10
 
       # Move active window to a workspace with mainMod + SHIFT + [0-9]
-      bind = $mainMod SHIFT, 1, exec,/home/fish/.cargo/bin/hyprsome move 1
-      bind = $mainMod SHIFT, 2, exec,/home/fish/.cargo/bin/hyprsome move 2
-      bind = $mainMod SHIFT, 3, exec,/home/fish/.cargo/bin/hyprsome move 3
-      bind = $mainMod SHIFT, 4, exec,/home/fish/.cargo/bin/hyprsome move 4
-      bind = $mainMod SHIFT, 5, exec,/home/fish/.cargo/bin/hyprsome move 5
-      bind = $mainMod SHIFT, 6, exec,/home/fish/.cargo/bin/hyprsome move 6
-      bind = $mainMod SHIFT, 7, exec,/home/fish/.cargo/bin/hyprsome move 7
-      bind = $mainMod SHIFT, 8, exec,/home/fish/.cargo/bin/hyprsome move 8
-      bind = $mainMod SHIFT, 9, exec,/home/fish/.cargo/bin/hyprsome move 9
-      bind = $mainMod SHIFT, 0, exec,/home/fish/.cargo/bin/hyprsome move 10
+      bind = $mainMod SHIFT, 1, split-movetoworkspace, 1
+      bind = $mainMod SHIFT, 2, split-movetoworkspace, 2
+      bind = $mainMod SHIFT, 3, split-movetoworkspace, 3
+      bind = $mainMod SHIFT, 4, split-movetoworkspace, 4
+      bind = $mainMod SHIFT, 5, split-movetoworkspace, 5
+      bind = $mainMod SHIFT, 6, split-movetoworkspace, 6
+      bind = $mainMod SHIFT, 7, split-movetoworkspace, 7
+      bind = $mainMod SHIFT, 8, split-movetoworkspace, 8
+      bind = $mainMod SHIFT, 9, split-movetoworkspace, 9
+      bind = $mainMod SHIFT, 0, split-movetoworkspace, 10
 
       # Scroll through existing workspaces with mainMod + scroll
       bind = $mainMod, TAB, workspace, e+1
