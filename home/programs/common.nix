@@ -18,7 +18,6 @@
     vscodium
 
     # security 
-    bitwarden
   ];
 
   programs = {

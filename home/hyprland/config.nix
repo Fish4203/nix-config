@@ -126,7 +126,7 @@
     "$mainMod, M, exit,"
     "$mainMod, E, exec, nemo"
     "$mainMod, V, togglefloating,"
-    "$mainMod, D, exec, tofi-drun --drun-launch=true"
+    "$mainMod, D, exec, rofi -show combi -combi-modes 'window,drun,ssh' -modes combi"
     "$mainMod, P, pseudo," # dwindle
     "$mainMod, J, togglesplit," # dwindle
     "$mainMod, l, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
@@ -162,8 +162,8 @@
     "$mainMod SHIFT, 0, split-movetoworkspace, 10"
 
     # Scroll through existing workspaces with mainMod + scroll
-    "$mainMod, TAB, workspace, e+1"
-    "$mainMod SHIFT, TAB, workspace, e-1"
+    "$mainMod, TAB, split-workspace, e+1"
+    "$mainMod SHIFT, TAB, split-workspace, e-1"
   ];  
 
 
