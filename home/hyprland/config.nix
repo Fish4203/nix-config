@@ -56,7 +56,7 @@
           natural_scroll = "no";
       };
 
-      sensitivity = 0.5 # -1.0 - 1.0, 0 means no modification.
+      sensitivity = 0.5; # -1.0 - 1.0, 0 means no modification.
   };
 
   general = {
@@ -68,7 +68,7 @@
       "col.active_border" = "rgba(DD6418ee) rgba(BE0E18ee) 25deg";
       "col.inactive_border" = "rgba(595959aa)";
 
-      layout = dwindle;
+      layout = "dwindle";
   };
 
   decoration = {
@@ -83,7 +83,7 @@
       drop_shadow = true; # yes
       shadow_range = 4;
       shadow_render_power = 3;
-      col.shadow = "rgba(1a1a1aee)";
+      "col.shadow" = "rgba(1a1a1aee)";
   };
 
   animations = {
@@ -93,12 +93,14 @@
 
       bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
-      animation = "windows, 1, 4, myBezier";
-      animation = "windowsOut, 1, 5, default, popin 80%";
-      animation = "border, 1, 5, default";
-      animation = "borderangle, 1, 6, default";
-      animation = "fade, 1, 4, default";
-      animation = "workspaces, 1, 4, default";
+      animation = [
+        "windows, 1, 4, myBezier"
+        "windowsOut, 1, 5, default, popin 80%"
+        "border, 1, 5, default"
+        "borderangle, 1, 6, default"
+        "fade, 1, 4, default"
+        "workspaces, 1, 4, default"
+      ]; 
   };
 
   dwindle = {
