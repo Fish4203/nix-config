@@ -1,18 +1,12 @@
 { 
   pkgs, 
+  inputs,
   ...
 }: {
 
-  programs.hyprland.enable = true;
-  # hyprland related options
-
-  wayland.windowManager.hyprland = {
+  programs.hyprland = {
     enable = true;
-
-    extraPackages = with pkgs; [
-      waybar
-      hyprpaper
-    ];
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
   
 }
