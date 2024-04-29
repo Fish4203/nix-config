@@ -27,9 +27,11 @@
 
   programs.bash = {
     enable = true;
-    # bashrcExtra = ''
-    
-    # '';
+    bashrcExtra = ''
+      source ${./git-prompt.sh}
+      PS1_CMD1=$(__git_ps1 " (%s)")
+      PS1="\u@\H:\w\[\e[2m\]''${PS1_CMD1}\[\e[0m\] > "
+    '';
   };
   
 }

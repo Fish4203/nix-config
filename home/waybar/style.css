@@ -2,7 +2,7 @@
 @define-color warning #f3f809;  /* warning color */
 @define-color fgcolor #ffffff;  /* foreground color */
 @define-color bgcolor #182225;  /* background color */
-@define-color bgcolor #182225;  /* background color */
+@define-color bgcolor #282c34;  /* background color */
 @define-color alert   #df3320;
 
 /* ROSE PINE */
@@ -210,7 +210,7 @@ label:focus {
 }
 
 #memory {
-    background-color: #9b59b6;
+    color: @accent1;
 }
 
 #backlight {

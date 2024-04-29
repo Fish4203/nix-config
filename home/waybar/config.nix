@@ -5,15 +5,13 @@
   #"gtk-layer-shell = false,
   # "width = 1280, # Waybar width
   # Choose the order of the modules
-  modules-left = [ "tray" "wlr/workspaces" ];
-  #, "sway/mode", "custom/media"],
+  modules-left = [ "tray" "hyprland/workspaces" ];
+  #, "hyprland/mode", "custom/media"],
   # "modules-center = ["custom/spotify"],
   modules-right = [
-    "cpu"
+    "memory"
     "custom/separator"
     "temperature"
-    #"custom/separator"
-    #"custom/power"
     "custom/separator"
     "backlight"
     "custom/separator"
@@ -29,25 +27,31 @@
     "custom/separator"
     "clock"
     "custom/separator"
-    # "custom/language"
-    # "custom/separator"
   ];
 
   # Modules configuration
-  "sway/workspaces" = {
+  "hyprland/workspaces" = {
       disable-scroll = true;
-      all-outputs = true;
-      format = "{name}: {icon}";
+      all-outputs = false;
+      format = "{name}: {windows}";
       format-icons = {
-          "1" = "";
-          "2" = "";
-          "3" = "";
-          "4" = "";
-          "5" = "";
-          urgent = "";
-          focused = "";
-          default = "";
+          "1" = " ";
+          "2" = " ";
+          "3" = "󰍡 ";
+          "11" = "󰈹 ";
+          "12" = " ";
+          "13" = " ";
+          urgent = " ";
+          focused = " ";
+          default = "name";
       };
+      window-rewrite-default = " ";
+      window-rewrite = {
+        "class<firefox>" = "󰈹 ";
+        "codium" = " ";
+        "kitty" = " ";
+      };
+      format-window-separator = "";
   };
   "custom/wmname" = {
       format = "";
@@ -60,22 +64,16 @@
       # on-click = "/usr/local/bin/hyprctl dispatch workspace 3"
       # sort-by-coordinates = true
   };
-  "custom/language" = {
-      exec = "swaymsg --type get_inputs | grep \"xkb_active_layout_name\" | sed -u '1!d; s/^.*xkb_active_layout_name\": \"//; s/ (US)//; s/\",//' && swaymsg --type subscribe --monitor '[\"input\"]' | sed -u 's/^.*xkb_active_layout_name\": \"//; s/\",.*$//; s/ (US)//'";
-  };
   "custom/separator" = {
       format = "|";
       interval = "once";
       tooltip = false;
   };
-  "sway/mode" = {
-      format = "<span style=\"italic\">{}</span>";
-  };
   "idle_inhibitor" = {
       format = "{icon}";
       format-icons = {
-          activated = "";
-          deactivated = "";
+          activated = "󰈈";
+          deactivated = "󰈉";
       };
   };
   "tray" = {
@@ -92,13 +90,14 @@
       interval = 1;
   };
   "cpu" = {
-      format = "&#8239;{usage}%";
+      format = "󰻠&#8239;{usage}%";
       tooltip = false;
       on-click = "kitty procs --sortd cpu --watch-interval 2";
   };
   "memory" = {
-      format = " {}%";
-  };
+      interval = 30;
+      format = "󰘚&#8239; {used}/{total}";  
+  };   
   "temperature" = {
       # thermal-zone = 2;
       # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
@@ -110,7 +109,7 @@
   "backlight" = {
       # device = "acpi_video1";
       format = "{icon}&#8239;{percent}%";
-      format-icons = ["" ""];
+      format-icons = ["󱩏 " "󱩖 "];
   };
   "battery" = {
       states = {
@@ -119,29 +118,28 @@
           critical = 15;
       };
       format = "{icon}&#8239;{capacity}%";
-      format-charging = "&#8239;{capacity}%";
-      format-plugged = "&#8239;{capacity}%";
+      format-charging = "󱐋&#8239;{capacity}%";
+      format-plugged = "󰚥&#8239;{capacity}%";
       format-alt = "{icon} {time}";
       # format-good = ""; # An empty format will hide the module
       # format-full = "";
-      format-icons = ["" "" "" "" ""];
-      # format-icons = ["" "" "" "" ""];
+      format-icons = [" " " " " " " " " "];
   };
   "battery#bat2" = {
       bat = "BAT2";
   };
   "network" = {
       # interface = "wlp2*"; # (Optional) To force the use of this interface
-      format-wifi = "&#8239;{essid} ({signalStrength}%)";
-      format-ethernet = "&#8239;{ifname}: {ipaddr}/{cidr}";
-      format-linked = "&#8239;{ifname} (No IP)";
-      format-disconnected = "&#8239;Disconnected";
+      format-wifi = "󰖩&#8239;{essid} ({signalStrength}%)";
+      format-ethernet = "󰛳&#8239;{ipaddr}/{cidr}";
+      format-linked = "󰛳&#8239;{ifname} (No IP)";
+      format-disconnected = "󰅛&#8239;Disconnected";
       format-alt = "{ifname}: {ipaddr}/{cidr}";
       on-click-right = "nm-connection-editor";
   };
   "bluetooth" = {
-      format = "";
-      format-disabled = "";
+      format = "󰂯";
+      format-disabled = "󰂲";
       interval = 30;
       on-click = "blueman-manager";
       on-click-right = "rfkill toggle bluetooth";
@@ -150,36 +148,21 @@
   "pulseaudio" = {
       # scroll-step = 1; # %; can be a float
       format = "{icon}&#8239;{volume}% {format_source}";
-      format-bluetooth = "{volume}% {icon} {format_source}";
-      format-bluetooth-muted = " {icon} {format_source}";
-      format-muted = "&#8239;0% {format_source}";
-      format-source = "&#8239;{volume}%";
+      format-bluetooth = "{volume}% {icon}󰗾 {format_source}";
+      format-bluetooth-muted = "{icon}󰗿 {format_source}";
+      format-muted = "󰝟&#8239;0% {format_source}";
+      format-source = "&#8239;{volume}%";
       format-source-muted = "";
       format-icons = {
-          headphone = "";
-          hands-free = "";
-          headset = "";
+          headphone = "󰋋";
+          hands-free = "󰋎";
+          headset = "󰋎";
           phone = "";
           portable = "";
           car = "";
-          default = ["" "" ""];
+          default = ["󰕿" "󰖀" "󰕾"];
       };
       on-click = "pavucontrol";
-  };
-  "custom/power" = {
-      format = "&#8239;{}W";
-      exec = "$HOME/bin/power.sh";
-      interval = 2;
-  };
-  "custom/waylandvsxorg" = {
-      exec = "$HOME/bin/window_wayland_xorg.sh";
-      interval = 2;
-  };
-  "custom/pacman" = {
-      format = "pkgs:{}";
-      exec = "$HOME/bin/updates-pacman-aurhelper.sh";
-      interval = 600;
-      on-click = "kitty paru -Syu --noconfirm --ignore=linux*";
   };
   "custom/spotify" = {
       exec = "/usr/bin/python3 /home/frigaut/bin/mediaplayer.py --player spotify";
