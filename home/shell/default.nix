@@ -28,9 +28,10 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
+      color_prompt=yes
+
       source ${./git-prompt.sh}
-      PS1_CMD1=$(__git_ps1 " (%s)")
-      PS1="\u@\H:\w\[\e[2m\]''${PS1_CMD1}\[\e[0m\] > "
+      PS1="\[\e[93m\]\u@\H:\[\e[32m\]\w\[\e[91m\]''$(__git_ps1)\[\e[0m\] > "
     '';
   };
   
