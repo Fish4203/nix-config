@@ -6,6 +6,7 @@
 
   home.file.".config/nvim/lua/main/init.lua".source = ./init.lua; 
   home.file.".config/nvim/lua/main/options.lua".source = ./options.lua; 
+  home.file.".config/nvim/lua/main/keymaps.lua".source = ./keymaps.lua; 
   home.file.".config/nvim/lua/pluginConfig/treesitter/init.lua".source = ./treesitter.lua; 
 
 

@@ -10,3 +10,5 @@ require("nvim-tree").setup({
     width = 30,
   },
 })
+
+require("main.keymaps")
