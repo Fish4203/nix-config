@@ -26,7 +26,7 @@
 
     plugins = with pkgs; [
       vimPlugins.nvim-tree-lua
-      vimplugin.undotree
+      vimPlugins.undotree
       vimPlugins.telescope-nvim
 
       {
