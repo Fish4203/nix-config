@@ -1,6 +1,7 @@
 require("main.options")
 
 require("pluginConfig.treesitter")
+require("pluginConfig.telescope")
 
 require("nvim-tree").setup({
   sort = {
