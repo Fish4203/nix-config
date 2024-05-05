@@ -42,6 +42,7 @@
       vimPlugins.nvim-lspconfig
       vimPlugins.lsp-zero-nvim
       vimPlugins.lspkind-nvim
+      vimPlugins.luasnip
       vimPlugins.cmp-nvim-lsp
       vimPlugins.nvim-cmp
     ];
