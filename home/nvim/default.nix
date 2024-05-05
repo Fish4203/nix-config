@@ -4,7 +4,9 @@
   ...
 }: {
 
-  home.file.".config/nvim/lua/treesitter/init.lua".source = ./treesitter.lua; 
+  home.file.".config/nvim/lua/main/init.lua".source = ./init.lua; 
+  home.file.".config/nvim/lua/main/options.lua".source = ./options.lua; 
+  home.file.".config/nvim/lua/pluginConfig/treesitter/init.lua".source = ./treesitter.lua; 
 
 
   programs.neovim = {
@@ -17,13 +19,7 @@
 
     # extraLuaConfig = lib.fileContents ./lua.init;
     extraLuaConfig = ''
-      vim.opt.number = true
-      vim.opt.mouse = "a"
-      vim.opt.smartcase = true
-      vim.opt.tabstop = 2
-      vim.opt.shiftwidth = 2
-
-      require("treesitter")
+      require("main")
     '';
 
     plugins = with pkgs; [
