@@ -9,6 +9,7 @@
   home.file.".config/nvim/lua/main/keymaps.lua".source = ./keymap.lua; 
   home.file.".config/nvim/lua/pluginConfig/treesitter/init.lua".source = ./treesitter.lua; 
   home.file.".config/nvim/lua/pluginConfig/telescope/init.lua".source = ./telescope.lua; 
+  home.file.".config/nvim/lua/pluginConfig/lspConfig/init.lua".source = ./lspConfig.lua; 
 
 
   programs.neovim = {
@@ -40,6 +41,11 @@
 
       vimPlugins.nvim-lspconfig
       vimPlugins.lsp-zero-nvim
+      vimPlugins.lspkind-nvim
+      vimPlugins.cmp-nvim-lsp
+      vimPlugins.nvim-cmp
+      vimPlugins.mason-nvim
+      vimPlugins.mason-lspconfig-nvim
     ];
   };
 }
