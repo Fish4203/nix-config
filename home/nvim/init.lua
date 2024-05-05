@@ -2,6 +2,7 @@ require("main.options")
 
 require("pluginConfig.treesitter")
 require("pluginConfig.telescope")
+require("pluginConfig.lspConfig")
 
 require("nvim-tree").setup({
   sort = {
@@ -13,3 +14,5 @@ require("nvim-tree").setup({
 })
 
 require("main.keymaps")
+
+vim.cmd("colorscheme onedark")

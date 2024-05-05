@@ -34,7 +34,12 @@
         config = "let g:startify_change_to_vcs_root = 0";
       }
 
+      vimPlugins.onedark-nvim
+
       vimPlugins.nvim-treesitter.withAllGrammars
+
+      vimPlugins.nvim-lspconfig
+      vimPlugins.lsp-zero-nvim
     ];
   };
 }

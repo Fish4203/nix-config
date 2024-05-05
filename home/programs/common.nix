@@ -9,6 +9,8 @@
     unzip
     p7zip
 
+    ripgrep
+
     # misc
     xdg-utils
     graphviz
