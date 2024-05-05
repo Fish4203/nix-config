@@ -4,7 +4,7 @@
   ...
 }: {
 
-  home.file.".config/neovim/after/plugin/tresitter.lua".source = ./treesitter.lua; 
+  home.file.".config/nvim/lua/treesitter/init.lua".source = ./treesitter.lua; 
 
 
   programs.neovim = {
@@ -22,6 +22,8 @@
       vim.opt.smartcase = true
       vim.opt.tabstop = 2
       vim.opt.shiftwidth = 2
+
+      require("treesitter")
     '';
 
     plugins = with pkgs; [
