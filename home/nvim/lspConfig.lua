@@ -7,21 +7,8 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 -- here you can setup the language servers
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {
-    tsserver
-  },
-  
-  handlers = {
-    function(server_name)
-      require('lspconfig')[server_name].setup({})
-    end,
-  },
-})
-
-local cmp_action = require('lsp-zero').cmp_action()
+require('lspconfig').tsserver.setup({})
+require('lspconfig').gopls.setup({})
 
 require'cmp'.setup({
 	preselect = 'item',

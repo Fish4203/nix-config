@@ -44,8 +44,6 @@
       vimPlugins.lspkind-nvim
       vimPlugins.cmp-nvim-lsp
       vimPlugins.nvim-cmp
-      vimPlugins.mason-nvim
-      vimPlugins.mason-lspconfig-nvim
     ];
   };
 }
