@@ -3,6 +3,10 @@
   lib,
   ...
 }: {
+
+  home.file.".config/neovim/after/plugin/tresitter.lua".source = ./treesitter.lua; 
+
+
   programs.neovim = {
     enable = true;
     
@@ -11,13 +15,25 @@
     vimdiffAlias = true;
     defaultEditor = true;
 
-    extraLuaConfig = lib.fileContents ./lua.init;
+    # extraLuaConfig = lib.fileContents ./lua.init;
+    extraLuaConfig = ''
+      vim.opt.number = true
+      vim.opt.mouse = "a"
+      vim.opt.smartcase = true
+      vim.opt.tabstop = 2
+      vim.opt.shiftwidth = 2
+    '';
 
-    plugins = [
-      pkgs.vimPlugins.nvim-tree-lua
+    plugins = with pkgs; [
+      vimPlugins.nvim-tree-lua
+
       {
-        plugin = pkgs.vimPlugins.vim-startify;
+        plugin = vimPlugins.vim-startify;
         config = "let g:startify_change_to_vcs_root = 0";
       }
+      vimPlugins.telescope-nvim
+
+      vimPlugins.nvim-treesitter.withAllGrammars
     ];
+  };
 }
