@@ -113,6 +113,10 @@ in {
     openFirewall = true;
   };
 
+  programs.gnupg.agent = {
+    enable = true;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -120,6 +124,7 @@ in {
     wget
     curl
     git
+    pinentry
     sysstat
     lm_sensors # for `sensors` command
     # minimal screen capture tool, used by i3 blur lock to take a screenshot

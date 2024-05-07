@@ -2,6 +2,11 @@
   pkgs,
   ...
 }: {
+
+  home.packages = with pkgs; [
+    pinentry-rofi
+  ];
+
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;

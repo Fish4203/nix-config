@@ -29,7 +29,10 @@
       vimPlugins.nvim-tree-lua
       vimPlugins.undotree
       vimPlugins.telescope-nvim
-
+      vimPlugins.barbar-nvim
+      
+      vimPlugins.nvim-web-devicons     
+      
       {
         plugin = vimPlugins.vim-startify;
         config = "let g:startify_change_to_vcs_root = 0";

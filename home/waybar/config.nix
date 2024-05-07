@@ -99,7 +99,7 @@
       format = "󰘚&#8239; {used}/{total}";  
   };   
   "temperature" = {
-      # thermal-zone = 2;
+      thermal-zone = 2;
       # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
       critical-threshold = 80;
       # format-critical = "{temperatureC}°C {icon}";
@@ -107,7 +107,7 @@
       format-icons = ["" "" ""];
   };
   "backlight" = {
-      # device = "acpi_video1";
+      device = "acpi_video1";
       format = "{icon}&#8239;{percent}%";
       format-icons = ["󱩏 " "󱩖 "];
   };
@@ -117,7 +117,7 @@
           warning = 30;
           critical = 15;
       };
-      format = "{icon}&#8239;{capacity}%";
+      format = "{icon} &#8239;{capacity}%";
       format-charging = "󱐋&#8239;{capacity}%";
       format-plugged = "󰚥&#8239;{capacity}%";
       format-alt = "{icon} {time}";
