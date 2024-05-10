@@ -10,7 +10,6 @@
     ./shell
     ./nvim
     ./direnv
-    ./android-sdk
   ];
 
   # Home Manager needs a bit of information about you and the
