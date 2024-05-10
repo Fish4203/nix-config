@@ -3,20 +3,20 @@
 {
 
   imports = [
-    ./hyprland
-    ./waybar
-    ./programs
-    ./rofi
-    ./shell
-    ./nvim
-    ./direnv
+    ../hyprland
+    ../waybar
+    ../programs
+    ../rofi
+    ../shell
+    ../nvim
+    ../direnv
   ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home = {
-    username = "fish4203";
-    homeDirectory = "/home/fish4203";
+    username = "benRycWork";
+    homeDirectory = "/home/benRycWork";
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage

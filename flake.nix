@@ -42,6 +42,24 @@
     ...
   }: {
     nixosConfigurations = {
+      benRycWork = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        system = "x86_64-linux";
+
+        modules = [
+          ./hosts/work
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.extraSpecialArgs = inputs;
+            home-manager.users.benRycWork = import ./home/benRycWork ;
+          }
+        ];
+      };
+
       fish4203 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         system = "x86_64-linux";
@@ -55,7 +73,7 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs;
-            home-manager.users.fish4203 = import ./home ;
+            home-manager.users.fish4203 = import ./home/fish4203 ;
           }
         ];
       };
