@@ -2,9 +2,7 @@
   pkgs,
   lib,
   ...
-}: let
-  username = "fish4203";
-in {
+}: {
   # ============================= User related =============================
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -16,10 +14,18 @@ in {
       # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJx3Sk20pLL1b2PPKZey2oTyioODrErq83xG78YpFBoj admin@ryan-MBP"
     ];
   };
+  users.users.benRycWork = {
+    isNormalUser = true;
+    description = "benRycWork";
+    extraGroups = ["networkmanager" "wheel"];
+    openssh.authorizedKeys.keys = [
+      # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJx3Sk20pLL1b2PPKZey2oTyioODrErq83xG78YpFBoj admin@ryan-MBP"
+    ];
+  };
   # given the users in this list the right to specify additional substituters via:
   #    1. `nixConfig.substituers` in `flake.nix`
   #    2. command line args `--options substituers http://xxx`
-  nix.settings.trusted-users = [username];
+  nix.settings.trusted-users = ["fish4203" "benRycWork"];
 
   # customise /etc/nix/nix.conf declaratively via `nix.settings`
   nix.settings = {
