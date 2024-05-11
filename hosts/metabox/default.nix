@@ -10,6 +10,8 @@
       ../../modules/system.nix
       ../../modules/hyprland.nix
 
+      ../../modules/smb.nix
+
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];

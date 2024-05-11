@@ -131,8 +131,8 @@ in {
     # print screen key is also bound to this tool in i3 config
     scrot
     neofetch
-    xfce.thunar # xfce4's file manager
-    pass
+    cinnamon.nemo-with-extensions
+    pass 
   ];
 
   # Enable sound with pipewire.

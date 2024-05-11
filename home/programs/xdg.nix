@@ -1,5 +1,6 @@
 {config, ...}: let
   browser = ["firefox.desktop"];
+  fileExp = ["nemo.desktop"];
 
   # XDG MIME types
   associations = {
@@ -25,6 +26,10 @@
     # "x-scheme-handler/discord" = [];
     # "x-scheme-handler/spotify" = [];
     # "x-scheme-handler/tg" = [];
+    
+    "inode/directory" = fileExp;
+    "x-directory/normal" = fileExp;
+
   };
 in {
   xdg = {
