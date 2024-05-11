@@ -4,7 +4,7 @@
   # See https://wiki.hyprland.org/Configuring/Monitors/
   # monitor=,preferred,auto,1
   monitor = [
-    "eDP-1,1920x1080@60,0x0,1"
+    "eDP-1,preferred,0x0,1"
     "DP-1,transform,1"
     "DP-1,2560x1440@75,1920x0,1"
   ];
