@@ -10,6 +10,7 @@
     p7zip
 
     ripgrep
+    lxde.lxsession
 
     # misc
     xdg-utils

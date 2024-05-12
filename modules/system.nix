@@ -139,7 +139,9 @@
     neofetch
     cinnamon.nemo-with-extensions
     pass 
+    gparted
   ];
+
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -147,7 +149,10 @@
   services.power-profiles-daemon = {
     enable = true;
   };
+
+  # polkit
   security.polkit.enable = true;
+
 
   services = {
     dbus.packages = [pkgs.gcr];
