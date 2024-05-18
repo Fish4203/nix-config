@@ -21,8 +21,11 @@
     insomnia
     vscodium
 
+    anytype
+    gimp
+
     # security 
-  ];
+ ];
 
   programs = {
     btop = {
