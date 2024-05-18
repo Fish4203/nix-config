@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ../awesome
+    ../hyprland
     ../programs
     ../rofi
     ../shell
