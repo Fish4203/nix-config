@@ -14,6 +14,8 @@
 
     firefox = {
       enable = true;
+      package = pkgs.firefox;
+      #nativeMessagingHosts.packages = [ pkgs.firefoxpwa ];
       profiles.fish4203 = {};
     };
   };
