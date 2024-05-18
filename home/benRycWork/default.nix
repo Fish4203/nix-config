@@ -3,6 +3,7 @@
 {
 
   imports = [
+    ../waybar
     ../hyprland
     ../programs
     ../rofi
