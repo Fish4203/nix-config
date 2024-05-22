@@ -3,13 +3,15 @@
 {
 
   imports = [
-    ../hyprland
     ../waybar
+    ../hyprland
     ../programs
     ../rofi
     ../shell
     ../nvim
     ../direnv
+
+    ./programs.nix
   ];
 
   # Home Manager needs a bit of information about you and the

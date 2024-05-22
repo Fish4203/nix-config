@@ -8,8 +8,10 @@
     zip
     unzip
     p7zip
+    libsForQt5.ark
 
     ripgrep
+    lxde.lxsession
 
     # misc
     xdg-utils

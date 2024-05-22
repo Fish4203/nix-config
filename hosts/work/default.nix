@@ -11,6 +11,8 @@
       ../../modules/hyprland.nix
 
       ../../modules/smb.nix
+      ../../modules/power.nix
+
 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
