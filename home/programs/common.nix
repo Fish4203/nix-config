@@ -20,8 +20,7 @@
     vscodium
 
     anytype
-    gimp
-
+    gimp-with-plugins
     # security 
  ];
 
