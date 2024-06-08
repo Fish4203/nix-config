@@ -22,8 +22,7 @@
     vscodium
 
     anytype
-    gimp
-
+    krita
     # security 
  ];
 
