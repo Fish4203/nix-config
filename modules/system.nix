@@ -144,15 +144,18 @@
 
 
   # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  # sound.enable = true;
+  # hardware.pulseaudio.enable = false;
 
   # polkit
   security.polkit.enable = true;
 
 
   services = {
-    dbus.packages = [pkgs.gcr];
+    dbus.packages = [
+      pkgs.gcr
+      pkgs.xdg-desktop-portal-gtk
+    ];
 
     pipewire = {
       enable = true;

@@ -5,8 +5,8 @@
 }: {
 
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 
   programs.hyprland = {
     enable = true;
@@ -20,6 +20,9 @@
 
   xdg.portal = {
     enable = true;
+    wlr = {
+      enable = true;
+    };
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
     ];
@@ -27,7 +30,7 @@
     config = {
       common = {
         default = [
-          "gtk"
+          "hyprland"
         ];
       };
     };
