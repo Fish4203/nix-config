@@ -144,8 +144,8 @@
 
 
   # Enable sound with pipewire.
-  # sound.enable = true;
-  # hardware.pulseaudio.enable = false;
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
 
   # polkit
   security.polkit.enable = true;

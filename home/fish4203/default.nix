@@ -4,6 +4,7 @@
 
   imports = [
     ../hyprland
+    ../awesome
     ../waybar
     ../programs
     ../rofi

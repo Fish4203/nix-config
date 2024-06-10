@@ -9,10 +9,12 @@
     [
       ../../modules/system.nix
       ../../modules/hyprland.nix
+      ../../modules/sddm.nix
+      ../../modules/awesome.nix
 
       ../../modules/smb.nix
       ../../modules/power.nix
-
+      ../../modules/docker.nix
 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix

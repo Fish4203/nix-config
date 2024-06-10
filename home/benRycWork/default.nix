@@ -5,6 +5,7 @@
   imports = [
     ../waybar
     ../hyprland
+    ../awesome
     ../programs
     ../rofi
     ../shell
