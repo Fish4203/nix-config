@@ -9,8 +9,10 @@
     margin-top = 0;
 
     # include-file = "~/.config/polybar/colors.ini";
-    include-file = "~/.config/polybar/modules.ini";
-    include-file = "~/.config/polybar/custom_modules.ini";
+    include-file = [
+      "~/.config/polybar/modules.ini" 
+      "~/.config/polybar/custom_modules.ini"
+      ];
   };
 
   "colors" = {
@@ -73,24 +75,24 @@
     offset-y = 0;
 
     # Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
-    background = "${colors.dark0_hard}";
+    background = "\${colors.dark0_hard}";
 
     # Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
-    foreground = "${colors.light0_soft}";
+    foreground = "\${colors.light0_soft}";
 
     # overline-size = 5
     border-size = 0;
 
     border-bottom-size = 0;
-    border-bottom-color = "${colors.dark0_hard}";
+    border-bottom-color = "\${colors.dark0_hard}";
     border-top-size = 0;
-    border-top-color = "${colors.dark0_hard}";
+    border-top-color = "\${colors.dark0_hard}";
 
     border-left-size = 0;
-    border-left-color = "${colors.dark0_hard}";
+    border-left-color = "\${colors.dark0_hard}";
 
     border-right-size = 8;
-    border-right-color = "${colors.dark0_hard}";
+    border-right-color = "\${colors.dark0_hard}";
 
     padding-left = 0;
     padding-right = 0;
@@ -222,8 +224,8 @@
     # i3
     scroll-up = "i3wm-wsnext";
     scroll-down = "i3wm-wsprev";
-    scroll-up = "i3-msg workspace next_on_output";
-    scroll-down = "i3-msg workspace prev_on_output";
+    #scroll-up = "i3-msg workspace next_on_output";
+    #scroll-down = "i3-msg workspace prev_on_output";
   };
 
   ## Application Settings

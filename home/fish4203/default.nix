@@ -4,7 +4,8 @@
 
   imports = [
     ../hyprland
-    ../awesome
+    ../i3
+    ../polybar
     ../waybar
     ../programs
     ../rofi

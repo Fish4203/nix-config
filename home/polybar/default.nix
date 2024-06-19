@@ -9,6 +9,6 @@
   services.polybar = {
     enable = true;
 
-    settings = import ./config.nix {};
+    config = import ./config.nix {};
   };
 }

@@ -10,6 +10,7 @@
       ../../modules/system.nix
       ../../modules/hyprland.nix
       ../../modules/sddm.nix
+      ../../modules/i3.nix
 
       ../../modules/smb.nix
       ../../modules/power.nix

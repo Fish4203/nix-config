@@ -8,9 +8,9 @@
   imports =
     [
       ../../modules/system.nix
-      ../../modules/hyprland.nix
       ../../modules/sddm.nix
-      ../../modules/awesome.nix
+      ../../modules/hyprland.nix      
+      ../../modules/i3.nix
 
       ../../modules/smb.nix
       ../../modules/power.nix
