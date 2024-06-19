@@ -9,6 +9,8 @@
   services.polybar = {
     enable = true;
 
+    script = "polybar bar &";
+
     config = import ./config.nix {};
   };
 }

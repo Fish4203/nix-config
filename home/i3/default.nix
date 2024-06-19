@@ -27,7 +27,7 @@
         "${modifier}+Return" = "exec ${pkgs.kitty}/bin/alacritty";
         "${modifier}+d" = "exec ${pkgs.rofi}/bin/rofi -show combi -combi-modes 'window,drun,ssh' -modes combi";
         "${modifier}+Shift+x" = "exec systemctl suspend";
-        "${modifier}+e" = "exec ${pkgs.nemo}/bin/nemo";
+        "${modifier}+e" = "exec nemo";
       };
 
       startup = [
